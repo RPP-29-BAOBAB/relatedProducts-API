@@ -35,17 +35,19 @@ module.exports = {
         }
           
         console.log('array', arrayOfRelatedID)
-        //now with this array of objects we want to return the product info for each object
-        let productInfoForRelatedID = mongo.mongo('findAllProductInfo',arrayOfRelatedID)
+
+        return callback(null,  arrayOfRelatedID);
         
-      }
+      } else {
       return axios.get(req.url)
         .then(response => {
+          // console.log('response!', response)
           callback(null, response.data);
         })
         .catch(err => {
           callback(err, null);
         });
+      }
     }
 
     // More varied data attached to POST/PUT requests:
