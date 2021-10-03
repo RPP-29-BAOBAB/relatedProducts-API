@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "webpack": "webpack",
-    "server": "node server/index.js",
+    "start": "nodemon server.js",
     "codeCoverage": "npx jest --coverage"
   },
   "repository": {
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/RPP-29-BAOBAB/relatedProducts-API#readme",
   "dependencies": {
     "assert": "^2.0.0",
+    "axios": "^0.22.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "csvtojson": "^2.0.10",
