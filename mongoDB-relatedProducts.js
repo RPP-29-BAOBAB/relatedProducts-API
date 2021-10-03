@@ -34,3 +34,5 @@ return findResult;
 
   return 'done.';
 }
+//calling function to grab all of a certain ID
+exports.mongo = main;

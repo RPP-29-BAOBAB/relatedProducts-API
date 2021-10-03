@@ -26,7 +26,7 @@ module.exports = {
       console.log('API query:\n', req.url, req.query);
       if(url.includes('related')) {
         let id = req.url.split('/')[2];
-        console.log('id', id);
+        console.log('mongo', mongo);
         let findRelated =  await mongo.mongo('findRelated', id);
         //now grab only the product ID
         let arrayOfRelatedID =[]
